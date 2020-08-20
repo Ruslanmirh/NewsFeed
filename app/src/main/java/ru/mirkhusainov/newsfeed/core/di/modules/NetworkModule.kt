@@ -1,9 +1,9 @@
 package ru.mirkhusainov.newsfeed.core.di.modules
 
 import retrofit2.Retrofit
-import ru.mirkhusainov.newsfeed.core.network.NewsApi
-import ru.mirkhusainov.newsfeed.core.network.provider.NewsApiProvider
-import ru.mirkhusainov.newsfeed.core.network.provider.RetrofitProvider
+import ru.mirkhusainov.newsfeed.data.network.NewsApi
+import ru.mirkhusainov.newsfeed.data.network.provider.NewsApiProvider
+import ru.mirkhusainov.newsfeed.data.network.provider.RetrofitProvider
 import toothpick.config.Module
 
 class NetworkModule : Module() {

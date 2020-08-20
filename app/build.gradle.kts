@@ -18,7 +18,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "ENDPOINT", "\" \"")
+        buildConfigField("String", "ENDPOINT", "\"https://newsapi.org/v2/\"")
+        buildConfigField("String", "API_KEY", "\"26eddb253e7840f988aec61f2ece2907\"")
+
     }
 
     buildTypes {
@@ -29,6 +31,11 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
@@ -45,7 +52,7 @@ object Dependencies {
     const val toothpick_version = "3.0.2"
 
     const val permissions_version = "0.10.2"
-    const val glide_version = "4.10.0"
+    const val picasso_version = "2.71828"
 
     const val material_version = "1.1.0-beta01"
     const val recyclerview_version = "1.1.0-beta05"
@@ -89,8 +96,6 @@ dependencies {
     implementation("com.github.stephanenicolas.toothpick:ktp:${Dependencies.toothpick_version}")
     kapt("com.github.stephanenicolas.toothpick:toothpick-compiler:${Dependencies.toothpick_version}")
 
-    //Glide
-    implementation("com.github.bumptech.glide:glide:${Dependencies.glide_version}")
-    annotationProcessor("com.github.bumptech.glide:compiler:${Dependencies.glide_version}")
-
+    //Picasso
+    implementation("com.squareup.picasso:picasso:${Dependencies.picasso_version}")
 }

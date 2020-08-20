@@ -12,8 +12,7 @@ import toothpick.Scope
 private const val STATE_SCOPE_NAME = "state_scope_name"
 
 abstract class BaseFragment : MvpAppCompatFragment(), BaseView {
-
-    private lateinit var fragmentScopeName: String
+    protected val scopeName: String = this.javaClass.name
 
     protected open fun installModules(scope: Scope) {}
 
